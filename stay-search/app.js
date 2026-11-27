@@ -347,6 +347,24 @@ function renderGuests(showErrors) {
     <div class="guest-foot"><button type="button" class="btn btn-primary btn-sm" data-act="guests-done">Done</button></div>`;
 }
 function renderHome() { renderBar(); }
+// Edit the trip without leaving results: the same search form moves into a panel under the trip bar.
+function openTripEdit() {
+  const view = $(`#v-${route.name}`), box = view && view.querySelector('.trip-edit');
+  if (!box) return;
+  S.product = 'stays';
+  box.appendChild($('#search-form')); box.hidden = false;
+  $$('[data-act="trip-edit"]').forEach(b => b.setAttribute('aria-expanded', 'true'));
+  renderBar();
+  openSeg('where');
+  const w = $('#where'); if (w) { w.focus({ preventScroll: true }); w.select(); }
+}
+function closeTripEdit() {
+  const open = $$('.trip-edit').some(b => !b.hidden);
+  $$('.trip-edit').forEach(b => { b.hidden = true; });
+  $$('[data-act="trip-edit"]').forEach(b => b.setAttribute('aria-expanded', 'false'));
+  if (open || !$('.hero-inner #search-form')) $('.hero-inner').appendChild($('#search-form'));
+}
+function goTo(hash) { if (location.hash === hash) go(); else location.hash = hash; }
 function agesOk() { return S.ages.every(a => a !== ''); }
 
 /* ---------- Help me choose (quiz popup) ---------- */
@@ -591,6 +609,7 @@ function go() {
   if (name === 'compare') { history.replaceState(null, '', '#results'); name = 'results'; after = openCompare; }
   const n = TITLES[name] ? name : 'home';
   const changed = n !== route.name || arg !== route.arg;
+  if (changed) closeTripEdit();
   route.name = n; route.arg = arg;
   $$('.view').forEach(v => v.classList.toggle('is-active', v.id === 'v-' + n));
   document.title = `${TITLES[n]} · Stay search prototype (usability study)`;
@@ -655,6 +674,8 @@ document.addEventListener('click', e => {
     case 'cal-clear': S.end = null; S.calPhase = 'start'; S.seg = 'checkin'; renderCal(); renderBar(); break;
     case 'cal-done': openSeg('who'); break;
     case 'guests-done': if (agesOk()) { closePops(); $('.sbar-go').focus(); } else { renderGuests(true); $('#guests .is-error').focus(); } break;
+    case 'trip-edit': if ($$('.trip-edit').some(b => !b.hidden)) { closePops(); closeTripEdit(); } else openTripEdit(); break;
+    case 'trip-edit-close': closePops(); closeTripEdit(); { const p = $(`#v-${route.name} [data-act="trip-edit"]`); if (p) p.focus(); } break;
     case 'quiz-open': e.preventDefault(); openQuiz(); break;
     case 'quiz-close': $('#quiz-dialog').close(); break;
     case 'quiz-back': S.qstep = Math.max(1, S.qstep - 1); renderQuiz(); $('#quiz-title').focus(); break;
@@ -714,6 +735,7 @@ document.addEventListener('keydown', e => {
     if (e.key === 'ArrowDown' || e.key === 'ArrowUp') { e.preventDefault(); sugIdx = (sugIdx + (e.key === 'ArrowDown' ? 1 : -1) + items.length) % items.length; renderSuggest(); }
     else if (e.key === 'Enter' && !$('#suggest').hidden) { e.preventDefault(); items[sugIdx] && items[sugIdx].click(); }
   }
+  if (e.key === 'Escape' && !S.seg && $$('.trip-edit').some(b => !b.hidden)) { closeTripEdit(); const p = $(`#v-${route.name} [data-act="trip-edit"]`); if (p) p.focus(); return; }
   if (e.key === 'Escape' && S.seg) { const seg = S.seg; closePops(); const b = $(`[data-seg="${seg}"]`); if (b) (b.querySelector('input') || b).focus(); }
 });
 document.addEventListener('mouseover', e => {
@@ -727,9 +749,13 @@ $('#search-form').addEventListener('submit', e => {
   if (!agesOk()) { openSeg('who'); renderGuests(true); $('#guests .is-error').focus(); return; }
   if (!SUGGEST.some(s => s[1] === S.where)) S.where = 'Istanbul, Türkiye';
   S.countOverride = null; S.keepLong = false; S.fromQuiz = false;
-  if (nights() > 30 && S.stayType !== 2) { location.hash = '#nomatch'; return; }
+  const here = route.name;
+  closePops(); closeTripEdit();
+  if (nights() > 30 && S.stayType !== 2) { goTo('#nomatch'); return; }
   if (S.stayType === 2 && nights() > 30) { S.f.types.add('Apartment'); S.countOverride = 63; }
-  pendingUpdate = true; location.hash = '#results';
+  pendingUpdate = true;
+  if (here === 'map') { goTo('#map'); return; }
+  goTo('#results');
 });
 addEventListener('hashchange', go);
 go();
