@@ -5,7 +5,17 @@
 
 A clickable prototype of a redesigned Agoda stay-search flow, built from the "Screens" section of a Figma file. There is no backend.
 
-## Run it
+## Try it
+
+**Live prototype: https://hadeeel6.github.io/stay-search-prototype/**
+
+Use a desktop browser for the full layout. The page carries a "Usability study · not the real Agoda" label next to the logo. GitHub Pages serves it from the `gh-pages` branch, which holds a copy of the `stay-search` folder. To publish changes, push `main`, then update that branch:
+
+```bash
+git push origin `git subtree split --prefix stay-search main`:refs/heads/gh-pages --force
+```
+
+## Run it locally
 
 Serve the `stay-search` folder with any static server, then open it in a browser:
 
