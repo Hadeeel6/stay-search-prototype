@@ -1,6 +1,9 @@
 # Stay search prototype
 
-A clickable prototype of a redesigned Agoda stay-search flow, built from the "Screens" section of a Figma file. It is a usability-testing prototype: all stays, prices and counts are sample data, and there is no backend.
+> **This is a usability study for Agoda, nothing more.**
+> It is a clickable design prototype made to test a redesigned stay-search flow with participants. It is not the Agoda website or app, it is not an official Agoda product, and it cannot search or book real stays. Every hotel, price, rating and count in it is sample data. The Agoda name and logo belong to their owner and appear only because the study redesigns their product.
+
+A clickable prototype of a redesigned Agoda stay-search flow, built from the "Screens" section of a Figma file. There is no backend.
 
 ## Run it
 
@@ -25,4 +28,6 @@ Open http://localhost:4173/index.html. The map needs an internet connection (Map
 - `PRODUCT.md`: who it's for and what it must do.
 - `DESIGN.md` and `.impeccable/design.json`: the design system the page follows.
 
-The Agoda name and logo come from the Figma mock. Keep this repository private.
+## About this study
+
+This prototype exists only for usability testing of the stay-search experience. Nothing here is a real offer, and no data is collected: the page runs entirely in the browser and only reaches the internet to load the map (the MapLibre library and its map tiles).
