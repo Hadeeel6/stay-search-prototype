@@ -653,7 +653,7 @@ dialog::backdrop { background: rgba(11,42,91,.4); }
 @media (max-width: 1360px) { .results { grid-template-columns: 248px minmax(440px, 1fr) minmax(320px, 360px); gap: var(--s-400); } }
 @media (max-width: 1180px) { .results { grid-template-columns: 248px minmax(0, 1fr); } }
 @media (max-width: 860px) { .results { grid-template-columns: 1fr; } }
-@container (max-width: 620px) {
+@container (max-width: 600px) {
   .card { gap: var(--s-300); }
   .card .photo { width: 168px; min-height: 160px; }
   .card .price { width: 116px; }
@@ -678,3 +678,22 @@ button.trip-pill { font: inherit; color: inherit; cursor: pointer; }
 .trip-edit .subopts { margin: 0 0 var(--s-300); }
 .trip-edit-x { position: absolute; top: 0; right: max(var(--s-800), calc((100% - 1376px) / 2)); }
 @media (max-width: 860px) { .trip-edit { padding: 0 var(--s-400) var(--s-400); } .trip-edit .search-panel { padding-right: 0; padding-top: 40px; } .trip-edit-x { right: var(--s-400); } }
+
+/* Square photos: sized to sit level with the card's text at each width */
+.card .photo { align-self: flex-start; width: 200px; height: auto; min-height: 0; aspect-ratio: 1 / 1; }
+@container (max-width: 600px) { .card .photo { width: 152px; min-height: 0; } }
+@container (max-width: 500px) { .card .photo { width: 100%; height: auto; aspect-ratio: 1 / 1; } }
+
+/* Layout by window width, chosen so the list always has room for a full card (photo 200 + details + price):
+   >=1440: 284 filters | list | 340-400 map;  1280-1439: 248 | list | 320;  <1280: map behind "Show map". */
+@media (max-width: 1439px) and (min-width: 1280px) { .results { grid-template-columns: 248px minmax(0, 1fr) 320px; gap: var(--s-400); } }
+@media (max-width: 1279px) { .results { grid-template-columns: 248px minmax(0, 1fr); } .mapcol { display: none; } .show-map-inline { display: inline-flex !important; } }
+@media (max-width: 860px) { .results { grid-template-columns: 1fr; } }
+/* Cards stack only when the list itself is narrow (phones), not because the window is under 860px */
+@container (min-width: 501px) {
+  .card { flex-direction: row; }
+  .card .price { flex-direction: column; align-items: flex-end; text-align: right; }
+  .card .price-top { align-items: flex-end; }
+}
+@container (min-width: 601px) { .card .price { width: 132px; } }
+@container (min-width: 501px) and (max-width: 600px) { .card .price { width: 116px; } }
