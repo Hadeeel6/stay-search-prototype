@@ -1,0 +1,14 @@
+# Local tooling and settings
+.claude/
+.grok/
+.DS_Store
+
+# Impeccable working files (keep config.json, design.json and surfaces/)
+.impeccable/config.local.json
+.impeccable/hook.cache.json
+.impeccable/figma/
+.impeccable/mocks/
+.impeccable/review/
+
+# Raw Figma exports; the shipping images are in stay-search/assets/
+stay-search/assets/raw/

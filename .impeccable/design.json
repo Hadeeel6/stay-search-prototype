@@ -1,0 +1,890 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-27T19:55:34+00:00",
+  "title": "Design System: Stay Search",
+  "extensions": {
+    "colorMeta": {
+      "brand-navy": {
+        "role": "primary",
+        "displayName": "Brand Navy",
+        "canonical": "#0b2a5b",
+        "tonalRamp": [
+          "#0b2a5b",
+          "#154a9e",
+          "#1a56b8",
+          "#2067da",
+          "#b5cef5",
+          "#dce8fb",
+          "#eef4fd",
+          "#ffffff"
+        ]
+      },
+      "brand-deep": {
+        "role": "primary",
+        "displayName": "Deep Blue",
+        "canonical": "#154a9e",
+        "tonalRamp": [
+          "#0b2a5b",
+          "#154a9e",
+          "#1a56b8",
+          "#2067da",
+          "#b5cef5",
+          "#dce8fb",
+          "#eef4fd",
+          "#ffffff"
+        ]
+      },
+      "brand-hover": {
+        "role": "primary",
+        "displayName": "Pressed Blue",
+        "canonical": "#1a56b8",
+        "tonalRamp": [
+          "#0b2a5b",
+          "#154a9e",
+          "#1a56b8",
+          "#2067da",
+          "#b5cef5",
+          "#dce8fb",
+          "#eef4fd",
+          "#ffffff"
+        ]
+      },
+      "brand-blue": {
+        "role": "primary",
+        "displayName": "Action Blue",
+        "canonical": "#2067da",
+        "tonalRamp": [
+          "#0b2a5b",
+          "#154a9e",
+          "#1a56b8",
+          "#2067da",
+          "#b5cef5",
+          "#dce8fb",
+          "#eef4fd",
+          "#ffffff"
+        ]
+      },
+      "brand-200": {
+        "role": "primary",
+        "displayName": "Blue Tint 200",
+        "canonical": "#b5cef5",
+        "tonalRamp": [
+          "#0b2a5b",
+          "#154a9e",
+          "#1a56b8",
+          "#2067da",
+          "#b5cef5",
+          "#dce8fb",
+          "#eef4fd",
+          "#ffffff"
+        ]
+      },
+      "brand-100": {
+        "role": "primary",
+        "displayName": "Blue Tint 100",
+        "canonical": "#dce8fb",
+        "tonalRamp": [
+          "#0b2a5b",
+          "#154a9e",
+          "#1a56b8",
+          "#2067da",
+          "#b5cef5",
+          "#dce8fb",
+          "#eef4fd",
+          "#ffffff"
+        ]
+      },
+      "brand-50": {
+        "role": "primary",
+        "displayName": "Blue Tint 50",
+        "canonical": "#eef4fd",
+        "tonalRamp": [
+          "#0b2a5b",
+          "#154a9e",
+          "#1a56b8",
+          "#2067da",
+          "#b5cef5",
+          "#dce8fb",
+          "#eef4fd",
+          "#ffffff"
+        ]
+      },
+      "on-brand": {
+        "role": "neutral",
+        "displayName": "On Brand White",
+        "canonical": "#ffffff",
+        "tonalRamp": [
+          "#111212",
+          "#282929",
+          "#474849",
+          "#68696a",
+          "#8b8c8e",
+          "#b0b1b3",
+          "#d2d4d7",
+          "#eeeeef"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "canonical": "#1e1e1e",
+        "tonalRamp": [
+          "#121212",
+          "#292929",
+          "#484848",
+          "#696969",
+          "#8c8c8c",
+          "#b1b1b1",
+          "#d4d4d4",
+          "#eeeeee"
+        ]
+      },
+      "ink-neutral": {
+        "role": "neutral",
+        "displayName": "Ink Neutral",
+        "canonical": "#303030",
+        "tonalRamp": [
+          "#121212",
+          "#292929",
+          "#484848",
+          "#696969",
+          "#8c8c8c",
+          "#b1b1b1",
+          "#d4d4d4",
+          "#eeeeee"
+        ]
+      },
+      "ink-muted": {
+        "role": "neutral",
+        "displayName": "Ink Muted",
+        "canonical": "#757575",
+        "tonalRamp": [
+          "#121212",
+          "#292929",
+          "#484848",
+          "#696969",
+          "#8c8c8c",
+          "#b1b1b1",
+          "#d4d4d4",
+          "#eeeeee"
+        ]
+      },
+      "ink-secondary": {
+        "role": "neutral",
+        "displayName": "Ink Secondary",
+        "canonical": "#4b5563",
+        "tonalRamp": [
+          "#0c121a",
+          "#222934",
+          "#3f4855",
+          "#606a77",
+          "#848d99",
+          "#aab2bc",
+          "#ced5de",
+          "#ebeff4"
+        ]
+      },
+      "surface": {
+        "role": "neutral",
+        "displayName": "Surface",
+        "canonical": "#ffffff",
+        "tonalRamp": [
+          "#111212",
+          "#282929",
+          "#474849",
+          "#68696a",
+          "#8b8c8e",
+          "#b0b1b3",
+          "#d2d4d7",
+          "#eeeeef"
+        ]
+      },
+      "surface-2": {
+        "role": "neutral",
+        "displayName": "Surface 2",
+        "canonical": "#f5f5f5",
+        "tonalRamp": [
+          "#121212",
+          "#292929",
+          "#484848",
+          "#696969",
+          "#8c8c8c",
+          "#b1b1b1",
+          "#d4d4d4",
+          "#eeeeee"
+        ]
+      },
+      "neutral-fill": {
+        "role": "neutral",
+        "displayName": "Neutral Fill",
+        "canonical": "#e3e3e3",
+        "tonalRamp": [
+          "#121212",
+          "#292929",
+          "#484848",
+          "#696969",
+          "#8c8c8c",
+          "#b1b1b1",
+          "#d4d4d4",
+          "#eeeeee"
+        ]
+      },
+      "page": {
+        "role": "neutral",
+        "displayName": "Cool Page Grey",
+        "canonical": "#f5f7fa",
+        "tonalRamp": [
+          "#111212",
+          "#282929",
+          "#474849",
+          "#68696a",
+          "#8b8c8e",
+          "#b0b1b3",
+          "#d2d4d7",
+          "#eeeeef"
+        ]
+      },
+      "border": {
+        "role": "neutral",
+        "displayName": "Hairline",
+        "canonical": "#d9d9d9",
+        "tonalRamp": [
+          "#121212",
+          "#292929",
+          "#484848",
+          "#696969",
+          "#8c8c8c",
+          "#b1b1b1",
+          "#d4d4d4",
+          "#eeeeee"
+        ]
+      },
+      "border-strong": {
+        "role": "neutral",
+        "displayName": "Border Strong",
+        "canonical": "#757575",
+        "tonalRamp": [
+          "#121212",
+          "#292929",
+          "#484848",
+          "#696969",
+          "#8c8c8c",
+          "#b1b1b1",
+          "#d4d4d4",
+          "#eeeeee"
+        ]
+      },
+      "border-neutral": {
+        "role": "neutral",
+        "displayName": "Border Neutral",
+        "canonical": "#767676",
+        "tonalRamp": [
+          "#121212",
+          "#292929",
+          "#484848",
+          "#696969",
+          "#8c8c8c",
+          "#b1b1b1",
+          "#d4d4d4",
+          "#eeeeee"
+        ]
+      },
+      "positive": {
+        "role": "tertiary",
+        "displayName": "Positive Green",
+        "canonical": "#0e7c3a",
+        "tonalRamp": [
+          "#001a00",
+          "#003508",
+          "#005821",
+          "#137e3c",
+          "#51a065",
+          "#82c390",
+          "#ade4b8",
+          "#dcf7e0"
+        ]
+      },
+      "positive-bg": {
+        "role": "tertiary",
+        "displayName": "Positive Tint",
+        "canonical": "#cff7d3",
+        "tonalRamp": [
+          "#001a00",
+          "#003508",
+          "#005821",
+          "#137e3c",
+          "#51a065",
+          "#82c390",
+          "#ade4b8",
+          "#dcf7e0"
+        ]
+      },
+      "positive-ink": {
+        "role": "tertiary",
+        "displayName": "Positive Ink",
+        "canonical": "#02542d",
+        "tonalRamp": [
+          "#001a00",
+          "#003508",
+          "#005821",
+          "#137e3c",
+          "#51a065",
+          "#82c390",
+          "#ade4b8",
+          "#dcf7e0"
+        ]
+      },
+      "danger": {
+        "role": "tertiary",
+        "displayName": "Danger",
+        "canonical": "#900b09",
+        "tonalRamp": [
+          "#370000",
+          "#5b0000",
+          "#8a0505",
+          "#ad4035",
+          "#cc6d60",
+          "#eb988c",
+          "#ffc1b6",
+          "#ffe3dc"
+        ]
+      },
+      "warning-bg": {
+        "role": "tertiary",
+        "displayName": "Warning Tint",
+        "canonical": "#fff1c2",
+        "tonalRamp": [
+          "#210b00",
+          "#402000",
+          "#683c00",
+          "#945a00",
+          "#c17a00",
+          "#f19c09",
+          "#ffc25e",
+          "#ffeacb"
+        ]
+      },
+      "warning-ink": {
+        "role": "tertiary",
+        "displayName": "Warning Ink",
+        "canonical": "#682d03",
+        "tonalRamp": [
+          "#210b00",
+          "#402000",
+          "#683c00",
+          "#945a00",
+          "#c17a00",
+          "#f19c09",
+          "#ffc25e",
+          "#ffeacb"
+        ]
+      },
+      "deal-ink": {
+        "role": "tertiary",
+        "displayName": "Deal Ink",
+        "canonical": "#b54708",
+        "tonalRamp": [
+          "#2f0000",
+          "#520800",
+          "#7e2600",
+          "#ad4202",
+          "#d06c41",
+          "#f09773",
+          "#ffbfa0",
+          "#ffe5d6"
+        ]
+      },
+      "deal-bg": {
+        "role": "tertiary",
+        "displayName": "Deal Tint",
+        "canonical": "#fef0e6",
+        "tonalRamp": [
+          "#2f0000",
+          "#520800",
+          "#7e2600",
+          "#ad4202",
+          "#d06c41",
+          "#f09773",
+          "#ffbfa0",
+          "#ffe5d6"
+        ]
+      },
+      "map-land": {
+        "role": "neutral",
+        "displayName": "Map Land",
+        "canonical": "#f2efe9",
+        "tonalRamp": [
+          "#121110",
+          "#292928",
+          "#484746",
+          "#6a6966",
+          "#8e8c88",
+          "#b3b1ac",
+          "#d6d4ce",
+          "#efeeec"
+        ]
+      },
+      "map-water": {
+        "role": "neutral",
+        "displayName": "Map Water",
+        "canonical": "#a9cbea",
+        "tonalRamp": [
+          "#0c1218",
+          "#202a34",
+          "#3b4a57",
+          "#576b7e",
+          "#768fa6",
+          "#96b5d1",
+          "#b8d9f6",
+          "#e6f0fa"
+        ]
+      },
+      "map-building": {
+        "role": "neutral",
+        "displayName": "Map Building",
+        "canonical": "#e2dcd3",
+        "tonalRamp": [
+          "#121110",
+          "#2a2926",
+          "#4a4744",
+          "#6b6864",
+          "#8f8b86",
+          "#b5b0a9",
+          "#d9d3cb",
+          "#f0eeeb"
+        ]
+      },
+      "map-park": {
+        "role": "neutral",
+        "displayName": "Map Park",
+        "canonical": "#cfe5c0",
+        "tonalRamp": [
+          "#0f130d",
+          "#262b22",
+          "#434b3d",
+          "#626d5a",
+          "#839279",
+          "#a6b89a",
+          "#c7dcb9",
+          "#eaf1e6"
+        ]
+      },
+      "photo-scrim": {
+        "role": "neutral",
+        "displayName": "Photo Scrim",
+        "canonical": "rgba(18,23,38,.72)",
+        "tonalRamp": [
+          "#0c0f18",
+          "#121726",
+          "#23293a",
+          "#3a4152",
+          "#5a6172",
+          "#848a99",
+          "#b4b8c2",
+          "#e4e6ea"
+        ]
+      },
+      "modal-backdrop": {
+        "role": "neutral",
+        "displayName": "Modal Backdrop",
+        "canonical": "rgba(11,42,91,.4)",
+        "tonalRamp": [
+          "#0b2a5b",
+          "#154a9e",
+          "#1a56b8",
+          "#2067da",
+          "#b5cef5",
+          "#dce8fb",
+          "#eef4fd",
+          "#ffffff"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Home hero headline only."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Question title in the Find my area dialog (36px)."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Section headings, area names, no-match heading."
+      },
+      "price": {
+        "displayName": "Price",
+        "purpose": "Hotel card total; tabular."
+      },
+      "card-title": {
+        "displayName": "Card Title",
+        "purpose": "Hotel names on cards and compare columns."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Default text, labels, buttons."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Chips, pins, landmark chips, filter headings, metadata emphasis."
+      },
+      "small": {
+        "displayName": "Small",
+        "purpose": "Metadata and notes."
+      },
+      "wordmark": {
+        "displayName": "Wordmark",
+        "purpose": "Header wordmark in Brand Navy."
+      },
+      "map-label": {
+        "displayName": "Map Label",
+        "purpose": "Uppercase neighbourhood names on the map with white halo; cartographic convention."
+      },
+      "display-mobile": {
+        "displayName": "Display Mobile",
+        "purpose": "Hero headline under 860px; provisional (no mobile frames in the Figma)."
+      },
+      "headline-mobile": {
+        "displayName": "Headline Mobile",
+        "purpose": "Dialog question title under 860px (28px); provisional."
+      },
+      "subheading": {
+        "displayName": "Subheading",
+        "purpose": "Figma Subheading token: hero subline; at 600/700 for the calendar heading, empty titles and drawer compare figures."
+      },
+      "field-label": {
+        "displayName": "Field Label",
+        "purpose": "12px label above each search-bar segment value, popover section heads, calendar weekday initials."
+      }
+    },
+    "shadows": [
+      {
+        "name": "shadow-100",
+        "value": "0 1px 4px rgba(12,12,13,.05)",
+        "purpose": "Resting hotel cards, flight swap button, scale bar."
+      },
+      {
+        "name": "shadow-200",
+        "value": "0 1px 4px rgba(12,12,13,.05), 0 1px 4px rgba(12,12,13,.1)",
+        "purpose": "Map overlays, search bar at rest, price-toggle thumb, hover on link cards."
+      },
+      {
+        "name": "shadow-400",
+        "value": "0 4px 4px -4px rgba(12,12,13,.05), 0 16px 32px -4px rgba(12,12,13,.1)",
+        "purpose": "Search panel, toast, full-map mini card, Show list button."
+      },
+      {
+        "name": "selection-ring",
+        "value": "inset 0 0 0 1px #2067da",
+        "purpose": "Paired with a blue border for hover/selected cards and options; also input focus."
+      },
+      {
+        "name": "shadow-600",
+        "value": "0 16px 32px -8px rgba(12,12,13,.4)",
+        "purpose": "Find my area dialog and compare drawer."
+      },
+      {
+        "name": "segment-lift",
+        "value": "0 2px 12px rgba(12,12,13,.14)",
+        "purpose": "Active search-bar segment lifting out of the dimmed bar."
+      },
+      {
+        "name": "search-popover",
+        "value": "0 8px 28px rgba(12,12,13,.16)",
+        "purpose": "Destination, calendar and guests popovers under the search bar."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease",
+        "value": "cubic-bezier(.16,1,.3,1)",
+        "purpose": "Switch knob, tab underline, price-toggle thumb, search button widening, dialog and drawer entrances, update bar."
+      },
+      {
+        "name": "state",
+        "value": "150ms",
+        "purpose": "Colour, border and shadow transitions on buttons, tags, cards, pins."
+      },
+      {
+        "name": "control",
+        "value": "180ms",
+        "purpose": "Switch track and knob."
+      },
+      {
+        "name": "update-bar",
+        "value": "900ms",
+        "purpose": "The in-place results loading bar; the one authored moment."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "0.01ms",
+        "purpose": "All animation and transition durations under prefers-reduced-motion."
+      },
+      {
+        "name": "tab-underline",
+        "value": "200ms scaleX",
+        "purpose": "Product tab indicator."
+      },
+      {
+        "name": "dialog-in",
+        "value": "220ms rise 12px + scale .98",
+        "purpose": "Find my area dialog and full-map mini card."
+      },
+      {
+        "name": "drawer-in",
+        "value": "280ms slide 40px",
+        "purpose": "Compare drawer."
+      },
+      {
+        "name": "toggle-thumb",
+        "value": "220ms",
+        "purpose": "Price-basis toggle thumb."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "no-map-column",
+        "value": "1180px",
+        "notes": "Map column drops; results grid 284px + fluid."
+      },
+      {
+        "name": "single-column",
+        "value": "860px",
+        "notes": "Search bar stacks into 60px segments in a 16px box with horizontal dividers; popovers inline; members banner stacks copy above action with dismiss top-right; cards stack; dialog title 28px."
+      }
+    ],
+    "focus": {
+      "value": "outline: 2px solid #2067da; outline-offset: 2px",
+      "purpose": "Global focus-visible ring."
+    },
+    "map": {
+      "engine": "MapLibre GL JS",
+      "baseStyle": "OpenFreeMap positron, recoloured",
+      "roadCasing": "#d9d2c7",
+      "road": "#ffffff",
+      "walkFill": "#2067da at 9% opacity",
+      "walkLine": "#2067da 1.5px dashed",
+      "route": "#2067da 4px dotted",
+      "resultsCameraPadding": {
+        "top": 40,
+        "bottom": 230,
+        "left": 0,
+        "right": 0
+      },
+      "basemapLabels": {
+        "results": "all hidden",
+        "full": "road and water names kept, text #757575 with #ffffff halo"
+      },
+      "zIndex": {
+        "overlays": 2,
+        "selectedPin": 3,
+        "routeLabel": 2,
+        "pin": 3
+      },
+      "routeLabelPlacement": "Nearest of 32 offsets (four rings of eight) around the selected pin that clears other pins, landmark chips and map edges (8px sides, 44px right for controls, 52px top for the overlay switch); otherwise the least-overlapping in-bounds spot. Stacks below price pins.",
+      "legend": "15-minute walk ring only; transit lines removed.",
+      "miniCard": "Full-screen map: compact card centred at bottom, max 520px, 104px square photo, 16px radius, Shadow 400.",
+      "scaleBar": "None. Removed at the user's request; distances are walking minutes on cards and the route label."
+    },
+    "imagery": {
+      "source": "Mock image fills from the user's Figma file",
+      "provenance": "stay-search/assets/PROVENANCE.md",
+      "files": [
+        "hero.jpg",
+        "pera.jpg",
+        "sisli.jpg",
+        "karakoy.jpg",
+        "galata.jpg"
+      ]
+    },
+    "popovers": {
+      "behavior": "Search-bar popovers sit 12px below the bar, 24px radius, borderless, segment-lift/search-popover shadows, overlaying the page; the search panel never grows. Calendar is centred, 720px. Static in flow under 860px."
+    },
+    "radiusMeta": {
+      "xl": {
+        "value": "24px",
+        "purpose": "Quiz card only, as drawn in Figma frames 01d to 01f."
+      }
+    },
+    "dialogs": {
+      "quiz": "<dialog> modal, max 760px, 24px radius, Shadow 600, backdrop rgba(11,42,91,.4).",
+      "compare": "<dialog> right drawer, full height, max 820px, Shadow 600, same backdrop."
+    },
+    "detectorExceptions": [
+      {
+        "rule": "overused-font",
+        "value": "inter",
+        "reason": "Figma is the visual authority and uses only Inter."
+      },
+      {
+        "rule": "side-tab",
+        "files": [
+          "stay-search/styles.css"
+        ],
+        "reason": "Recorded for the Figma 01g area-card strip; that component has since been removed from the build, so this exception no longer has a target."
+      },
+      {
+        "rule": "side-tab",
+        "files": [
+          "stay-search/index.html"
+        ],
+        "reason": "False positive: .seg::before is the 1px vertical divider between search-bar segments, not an accent stripe."
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Search stays, Apply, Compare: every primary action.",
+      "html": "<button class=\"ds-btn-primary\">Search stays</button>",
+      "css": ":host{--brand-900:#0b2a5b;--brand-700:#154a9e;--brand-600:#1a56b8;--brand-500:#2067da;--brand-200:#b5cef5;--brand-100:#dce8fb;--brand-50:#eef4fd;--text:#1e1e1e;--text-2:#757575;--text-2-strong:#4b5563;--text-positive:#0e7c3a;--border:#d9d9d9;--bg-2:#f5f5f5;--deal-text:#b54708;--deal-bg:#fef0e6;--shadow-100:0 1px 4px rgba(12,12,13,.05);--shadow-200:0 1px 4px rgba(12,12,13,.05),0 1px 4px rgba(12,12,13,.1);font-family:Inter,system-ui,sans-serif;}.ds-btn-primary{display:inline-flex;align-items:center;justify-content:center;height:40px;min-width:160px;padding:12px;border-radius:8px;border:1px solid #2067da;background:#2067da;color:#fff;font:400 16px/1 Inter,system-ui,sans-serif;cursor:pointer;transition:background-color .15s,border-color .15s}.ds-btn-primary:hover{background:#1a56b8;border-color:#1a56b8}.ds-btn-primary:active{background:#154a9e}.ds-btn-primary:focus-visible{outline:2px solid #2067da;outline-offset:2px}"
+    },
+    {
+      "name": "Segmented Search Bar",
+      "kind": "input",
+      "refersTo": "search-bar",
+      "description": "Full-round bar of label/value segments with hairline dividers; the open segment lifts out in white over the dimmed bar; the round search button widens to show Search.",
+      "html": "<div class=\"ds-sbar has-active\"><button class=\"ds-seg is-active\"><span class=\"ds-l\">Where</span><span class=\"ds-v\">Istanbul</span></button><button class=\"ds-seg\"><span class=\"ds-l\">Dates</span><span class=\"ds-v\">Dec 1 – Dec 5</span></button><button class=\"ds-seg\"><span class=\"ds-l\">Guests</span><span class=\"ds-v\">2 adults, 1 room</span></button><button class=\"ds-go\" aria-label=\"Search\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\"><circle cx=\"11\" cy=\"11\" r=\"7\"/><path d=\"M20 20l-4-4\"/></svg><span>Search</span></button></div>",
+      "css": ".ds-sbar{display:flex;align-items:center;width:760px;min-height:68px;border:1px solid #d9d9d9;border-radius:9999px;background:#fff;box-shadow:0 1px 4px rgba(12,12,13,.05),0 1px 4px rgba(12,12,13,.1);font-family:Inter,system-ui,sans-serif;transition:background-color .2s}.ds-sbar.has-active{background:#f5f5f5}.ds-seg{position:relative;flex:1;align-self:stretch;display:flex;flex-direction:column;justify-content:center;gap:2px;padding:0 24px;border:0;background:none;border-radius:9999px;text-align:left;cursor:pointer;transition:background-color .15s}.ds-seg+.ds-seg::before{content:'';position:absolute;left:0;top:18px;bottom:18px;width:1px;background:#d9d9d9}.ds-seg:hover{background:#e3e3e3}.ds-seg:hover::before,.ds-seg:hover+.ds-seg::before,.ds-seg.is-active::before,.ds-seg.is-active+.ds-seg::before{opacity:0}.ds-seg.is-active{background:#fff;box-shadow:0 2px 12px rgba(12,12,13,.14);z-index:1}.ds-seg:focus-visible{outline:0;box-shadow:0 0 0 2px #2067da}.ds-l{font-size:12px;font-weight:600;letter-spacing:.02em;line-height:16px;color:#1e1e1e}.ds-v{font-size:16px;color:#1e1e1e;white-space:nowrap}.ds-go{flex:none;display:inline-flex;align-items:center;gap:8px;height:52px;min-width:52px;margin:0 8px 0 4px;padding:0 22px 0 18px;border:0;border-radius:9999px;background:#2067da;color:#fff;font:600 16px Inter,sans-serif;cursor:pointer}.ds-go:hover{background:#1a56b8}.ds-go:focus-visible{outline:2px solid #2067da;outline-offset:2px}"
+    },
+    {
+      "name": "Link and Outline Buttons",
+      "kind": "button",
+      "refersTo": "button-link",
+      "description": "Secondary actions: link text on a tint hover, or a blue outline.",
+      "html": "<div class=\"ds-row\"><button class=\"ds-btn-link\">See stays in Karaköy</button><button class=\"ds-btn-outline\">Show on map</button><button class=\"ds-btn-neutral\">Reset</button></div>",
+      "css": ".ds-row{display:flex;gap:8px;font-family:Inter,system-ui,sans-serif}.ds-btn-link,.ds-btn-outline,.ds-btn-neutral{padding:12px;border-radius:8px;font:400 16px/1 Inter,system-ui,sans-serif;cursor:pointer;transition:background-color .15s}.ds-btn-link{border:1px solid transparent;background:transparent;color:#154a9e}.ds-btn-link:hover{background:#eef4fd}.ds-btn-outline{background:#fff;border:1.5px solid #2067da;color:#154a9e}.ds-btn-outline:hover{background:#eef4fd}.ds-btn-neutral{background:#e3e3e3;border:1px solid #767676;color:#1e1e1e}.ds-btn-neutral:hover{background:#d6d6d6}.ds-row button:focus-visible{outline:2px solid #2067da;outline-offset:2px}"
+    },
+    {
+      "name": "Tag Toggle and Tags",
+      "kind": "chip",
+      "refersTo": "tag-toggle",
+      "description": "Filter and rating toggles (pressed = solid blue) and tinted removable filter tags.",
+      "html": "<div class=\"ds-row\"><button class=\"ds-toggle\" aria-pressed=\"true\">8+</button><button class=\"ds-toggle\" aria-pressed=\"false\">9+</button><span class=\"ds-tag\">Free cancellation <b aria-hidden=\"true\">×</b></span><span class=\"ds-tag-deal\">22% off</span></div>",
+      "css": ".ds-row{display:flex;gap:8px;align-items:center;font:400 16px/1 Inter,system-ui,sans-serif}.ds-toggle{padding:8px;border:0;border-radius:8px;background:#eef4fd;color:#4b5563;font:inherit;cursor:pointer;transition:background-color .15s,color .15s}.ds-toggle:hover{background:#dce8fb}.ds-toggle[aria-pressed=true]{background:#2067da;color:#fff}.ds-toggle:focus-visible{outline:2px solid #2067da;outline-offset:2px}.ds-tag{display:inline-flex;gap:8px;padding:8px;border-radius:8px;background:#eef4fd;color:#154a9e}.ds-tag b{font-weight:400}.ds-tag-deal{padding:3px 8px;border-radius:8px;background:#fef0e6;color:#b54708;font-size:14px;font-weight:600;line-height:1.4}"
+    },
+    {
+      "name": "Input Field",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "40px white field with hairline; focus turns blue with inset ring.",
+      "html": "<label class=\"ds-field\"><span>Where are you going?</span><input class=\"ds-input\" placeholder=\"Istanbul\"></label>",
+      "css": ".ds-field{display:flex;flex-direction:column;gap:8px;font:400 16px/1.4 Inter,system-ui,sans-serif;color:#1e1e1e;width:280px}.ds-input{height:40px;padding:0 16px;border:1px solid #d9d9d9;border-radius:8px;background:#fff;font:inherit;color:inherit}.ds-input::placeholder{color:#757575}.ds-input:hover{border-color:#b3b3b3}.ds-input:focus-visible{outline:0;border-color:#2067da;box-shadow:inset 0 0 0 1px #2067da}"
+    },
+    {
+      "name": "Header",
+      "kind": "nav",
+      "refersTo": "header",
+      "description": "White bar, hairline bottom, navy wordmark, subtle nav buttons.",
+      "html": "<header class=\"ds-header\"><a class=\"ds-wordmark\" href=\"#\">agoda</a><nav class=\"ds-nav\"><button>Stays</button><button>Flights</button></nav><button class=\"ds-signin\">Sign in</button></header>",
+      "css": ".ds-header{display:flex;align-items:center;gap:24px;padding:16px 32px;background:#fff;border-bottom:1px solid #d9d9d9;font:400 16px/1 Inter,system-ui,sans-serif}.ds-wordmark{font-size:30px;font-weight:700;line-height:34px;letter-spacing:-.03em;color:#0b2a5b;text-decoration:none}.ds-nav{display:flex;gap:4px;flex:1}.ds-nav button{padding:12px;border:0;border-radius:8px;background:transparent;color:#303030;font:inherit;cursor:pointer}.ds-nav button:hover{background:#f5f5f5}.ds-signin{padding:12px;border:1.5px solid #2067da;border-radius:8px;background:#fff;color:#154a9e;font:inherit;cursor:pointer}.ds-signin:hover{background:#eef4fd}"
+    },
+    {
+      "name": "Hotel Card",
+      "kind": "card",
+      "refersTo": "hotel-card",
+      "description": "Result card: photo, details with navy score and green cancellation, tabular price; hover takes the blue ring.",
+      "html": "<article class=\"ds-card\"><div class=\"ds-photo\"></div><div class=\"ds-details\"><h3>Pera Palace Rooms</h3><div class=\"ds-rating\"><span class=\"ds-score\">8.9</span><b>Excellent</b></div><span class=\"ds-cancel\">Free cancellation</span></div><div class=\"ds-price\"><span class=\"ds-tag-deal\">22% off</span><strong>$312</strong><small>4 nights, incl. taxes</small></div></article>",
+      "css": ".ds-card{display:flex;gap:16px;padding:16px;width:640px;background:#fff;border:1px solid #d9d9d9;border-radius:16px;box-shadow:0 1px 4px rgba(12,12,13,.05);font:400 14px/1.4 Inter,system-ui,sans-serif;color:#1e1e1e;transition:border-color .15s,box-shadow .15s}.ds-card:hover{border-color:#2067da;box-shadow:inset 0 0 0 1px #2067da,0 1px 4px rgba(12,12,13,.05)}.ds-photo{width:200px;height:150px;border-radius:8px;background:#dce8fb}.ds-details{flex:1;display:flex;flex-direction:column;gap:6px}.ds-details h3{margin:0;font-size:18px;line-height:24px;font-weight:600}.ds-rating{display:flex;gap:8px;align-items:center}.ds-score{background:#0b2a5b;color:#fff;font-weight:600;padding:4px 8px;border-radius:8px;font-variant-numeric:tabular-nums}.ds-cancel{color:#0e7c3a;font-weight:600}.ds-price{width:132px;display:flex;flex-direction:column;align-items:flex-end;gap:8px;text-align:right}.ds-price strong{font-size:28px;line-height:32px;font-weight:700;letter-spacing:-.01em;font-variant-numeric:tabular-nums}.ds-price small{color:#757575;font-size:14px;white-space:nowrap}.ds-tag-deal{padding:3px 8px;border-radius:8px;background:#fef0e6;color:#b54708;font-weight:600}"
+    },
+    {
+      "name": "Map Price Pin and Landmark Chip",
+      "kind": "custom",
+      "refersTo": "price-pin",
+      "description": "Signature map annotations: navy-outlined price pills (selected = blue) and landmark chips (anchor = navy).",
+      "html": "<div class=\"ds-map\"><button class=\"ds-pin\">$78</button><button class=\"ds-pin is-selected\">$64</button><span class=\"ds-landmark\">Galata Tower</span><span class=\"ds-landmark is-anchor\">Taksim Square</span></div>",
+      "css": ".ds-map{display:flex;gap:12px;align-items:center;padding:24px;background:#f2efe9;border-radius:16px}.ds-pin{padding:5px 9px;border-radius:9999px;background:#fff;color:#0b2a5b;border:1.5px solid #0b2a5b;font:600 14px/1.4 Inter,sans-serif;font-variant-numeric:tabular-nums;box-shadow:0 1px 4px rgba(12,12,13,.05),0 1px 4px rgba(12,12,13,.1);cursor:pointer;transition:background-color .15s,transform .15s}.ds-pin:hover{transform:scale(1.06)}.ds-pin.is-selected{background:#2067da;border-color:#2067da;color:#fff}.ds-pin:focus-visible{outline:2px solid #2067da;outline-offset:2px}.ds-landmark{padding:4px 8px;border-radius:4px;background:#fff;font:600 14px/1.4 Inter,sans-serif;box-shadow:0 1px 4px rgba(12,12,13,.05),0 1px 4px rgba(12,12,13,.1)}.ds-landmark.is-anchor{background:#0b2a5b;color:#fff}"
+    },
+    {
+      "name": "Quiz Option Card",
+      "kind": "card",
+      "refersTo": "quiz-option",
+      "description": "Selectable answer card; selected takes brand-50 fill, blue ring and filled radio.",
+      "html": "<div class=\"ds-opts\"><button class=\"ds-option\" role=\"radio\" aria-checked=\"true\"><span class=\"ds-tile\"></span><b>Sightseeing</b><small>Close to the old city</small><span class=\"ds-radio\"></span></button><button class=\"ds-option\" role=\"radio\" aria-checked=\"false\"><span class=\"ds-tile\"></span><b>Nightlife</b><small>Bars and late food</small><span class=\"ds-radio\"></span></button></div>",
+      "css": ".ds-opts{display:grid;grid-template-columns:repeat(2,220px);gap:16px;font-family:Inter,system-ui,sans-serif}.ds-option{position:relative;display:block;text-align:left;padding:20px;min-height:148px;border:1px solid #d9d9d9;border-radius:16px;background:#fff;color:#1e1e1e;font:400 16px/1.4 Inter,system-ui,sans-serif;cursor:pointer;transition:border-color .15s,background-color .15s}.ds-option:hover{border-color:#b5cef5}.ds-option:focus-visible{outline:2px solid #2067da;outline-offset:2px}.ds-tile{display:block;width:44px;height:44px;border-radius:8px;background:#f5f5f5}.ds-option b{display:block;font-weight:600;margin-top:12px}.ds-option small{display:block;font-size:14px;color:#4b5563;margin-top:8px}.ds-radio{position:absolute;top:30px;right:20px;width:22px;height:22px;border-radius:50%;border:1.5px solid #b3b3b3}.ds-option[aria-checked=true]{background:#eef4fd;border-color:#2067da;box-shadow:inset 0 0 0 1px #2067da}.ds-option[aria-checked=true] .ds-tile{background:#dce8fb}.ds-option[aria-checked=true] .ds-radio{background:#2067da;border-color:#2067da}"
+    },
+    {
+      "name": "Compare Tray",
+      "kind": "custom",
+      "refersTo": "compare-tray",
+      "description": "Sticky 65px bottom bar holding the shortlist count and Compare action.",
+      "html": "<div class=\"ds-tray\"><div><b>2 stays selected</b> <small>Add up to 4</small></div><button>Compare</button></div>",
+      "css": ".ds-tray{display:flex;align-items:center;justify-content:space-between;gap:16px;height:65px;padding:0 32px;background:#fff;border-top:1px solid #d9d9d9;font:400 16px/1.4 Inter,system-ui,sans-serif;color:#1e1e1e}.ds-tray b{font-weight:600}.ds-tray small{font-size:14px;color:#4b5563;margin-left:12px}.ds-tray button{padding:12px;border-radius:8px;border:1px solid #2067da;background:#2067da;color:#fff;font:inherit;line-height:1;cursor:pointer}.ds-tray button:hover{background:#1a56b8}.ds-tray button:focus-visible{outline:2px solid #2067da;outline-offset:2px}"
+    },
+    {
+      "name": "Calendar Range",
+      "kind": "custom",
+      "refersTo": "calendar-range-band",
+      "description": "40px circular day marks over one continuous brand-100 band with half-bands at the endpoints and round caps at week edges.",
+      "html": "<div class=\"ds-cal\"><button class=\"ds-d\"><span>29</span></button><button class=\"ds-d s\"><span>1</span></button><button class=\"ds-d r\"><span>2</span></button><button class=\"ds-d r\"><span>3</span></button><button class=\"ds-d r\"><span>4</span></button><button class=\"ds-d e\"><span>5</span></button><button class=\"ds-d\"><span>6</span></button></div>",
+      "css": ".ds-cal{display:grid;grid-template-columns:repeat(7,48px);font:500 14px Inter,sans-serif;font-variant-numeric:tabular-nums}.ds-d{position:relative;height:44px;padding:0;border:0;background:none;color:#1e1e1e;cursor:pointer}.ds-d::before{content:'';position:absolute;top:2px;bottom:2px;left:0;right:0}.ds-d.r::before{background:#dce8fb}.ds-d.s::before{left:50%;background:#dce8fb}.ds-d.e::before{right:50%;background:#dce8fb}.ds-d>span{position:relative;z-index:1;display:grid;place-items:center;width:40px;height:40px;margin:0 auto;border-radius:50%;transition:box-shadow .12s}.ds-d:hover>span{box-shadow:inset 0 0 0 1.5px #1e1e1e}.ds-d.s>span,.ds-d.e>span{background:#2067da;color:#fff;font-weight:600}.ds-d:focus-visible{outline:2px solid #2067da;outline-offset:2px}"
+    },
+    {
+      "name": "Price-basis Toggle",
+      "kind": "custom",
+      "refersTo": "price-toggle",
+      "description": "Sliding segmented pill: Per night / Total stay.",
+      "html": "<div class=\"ds-pt\" data-on=\"night\"><button aria-checked=\"true\">Per night</button><button aria-checked=\"false\">Total stay</button></div>",
+      "css": ".ds-pt{position:relative;display:inline-grid;grid-template-columns:1fr 1fr;padding:3px;border-radius:9999px;background:#e3e3e3;font:14px Inter,sans-serif}.ds-pt::before{content:'';position:absolute;top:3px;bottom:3px;left:3px;width:calc(50% - 3px);border-radius:9999px;background:#fff;box-shadow:0 1px 4px rgba(12,12,13,.05),0 1px 4px rgba(12,12,13,.1);transition:transform .22s cubic-bezier(.16,1,.3,1)}.ds-pt:hover::before{transform:translateX(100%)}.ds-pt button{position:relative;z-index:1;height:32px;padding:0 16px;border:0;background:none;border-radius:9999px;font:inherit;color:#4b5563;cursor:pointer}.ds-pt button[aria-checked=true]{color:#1e1e1e;font-weight:600}.ds-pt button:focus-visible{outline:2px solid #2067da;outline-offset:2px}"
+    },
+    {
+      "name": "Amenity Tile",
+      "kind": "chip",
+      "refersTo": "amenity-tile",
+      "description": "Two-column icon tiles in the filter sidebar; pressed takes the blue ring.",
+      "html": "<div class=\"ds-amen\"><button class=\"ds-at\" aria-pressed=\"true\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M5 12.5a10 10 0 0 1 14 0M8.5 16a5 5 0 0 1 7 0\"/><circle cx=\"12\" cy=\"19\" r=\"1\"/></svg>Free Wi-Fi</button><button class=\"ds-at\" aria-pressed=\"false\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"4\" y=\"4\" width=\"16\" height=\"16\" rx=\"2\"/></svg>Breakfast</button></div>",
+      "css": ".ds-amen{display:grid;grid-template-columns:repeat(2,130px);gap:8px;font-family:Inter,sans-serif}.ds-at{display:flex;align-items:center;gap:8px;min-height:44px;padding:8px 12px;border:1px solid #d9d9d9;border-radius:8px;background:#fff;font:14px Inter,sans-serif;color:#303030;text-align:left;cursor:pointer;transition:border-color .15s,background-color .15s}.ds-at svg{color:#4b5563;flex:none}.ds-at:hover{border-color:#b5cef5}.ds-at[aria-pressed=true]{border-color:#2067da;background:#eef4fd;color:#154a9e;font-weight:600;box-shadow:inset 0 0 0 1px #2067da}.ds-at[aria-pressed=true] svg{color:#2067da}.ds-at:focus-visible{outline:2px solid #2067da;outline-offset:2px}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Figma Mock, Working",
+    "overview": "This system is inherited whole from the user's Figma file (SDS variables plus the Brand, Accent and Map collections) and is recorded as the build shipped it. It is a calm, conventional travel-booking interface: white surfaces sitting on a cool page grey, hairline borders, one saturated blue for everything that acts or is selected, and a deep navy that anchors identity and trust marks. Density is moderate and desktop-first (1440px design width); information is set in a single typeface at a small number of sizes so that prices and scores do the shouting.\n\nThe map is a first-class surface, not an illustration: a live MapLibre GL JS map with the OpenFreeMap positron style recoloured to the Figma's Map collection (warm land, soft blue water, sand buildings, pale green parks), with the system's own pins, chips and labels drawn on top. Motion is restrained: 150 to 200ms colour and border transitions, short rises for the dialog and drawer, with the in-place results update bar as the single authored moment. The search form borrows a segmented, full-round search bar pattern (Airbnb-style) and renders it in this system's blue and greys.\n\nImagery is the Figma's own: all five photos (hero and four stay/area photos) are mock image fills taken from the user's Figma file, recorded with their image hashes and uses in `stay-search/assets/PROVENANCE.md`. They are demonstration images, not photos of real properties; any new photo needs a matching provenance entry there.",
+    "keyCharacteristics": [
+      "Inter only, in four working weights (400, 500, 600, 700) with tabular numerals on every figure.",
+      "One blue for action and selection; navy for the wordmark, score badges, landmark anchor, toast and dark map buttons.",
+      "8px rectangular controls, 16px cards and panels, 24px dialogs and search popovers, full-round search bar, chips, pins and pills.",
+      "Hairline 1px grey borders define containers; shadows are soft and ambient.",
+      "Green appears only for free cancellation, positive ticks and \"best\" marks."
+    ],
+    "rules": [
+      {
+        "name": "The One Blue Rule",
+        "body": "Action Blue is the only saturated colour that means \"act\" or \"selected\". Navy identifies; green confirms; nothing else is clickable-looking.",
+        "section": "colors"
+      },
+      {
+        "name": "The Green Means Kept Rule",
+        "body": "Green is reserved for free cancellation, met conditions and \"best\" marks. It never decorates.",
+        "section": "colors"
+      },
+      {
+        "name": "The Tabular Figures Rule",
+        "body": "Every price, score, count, date and pin uses tabular numerals so columns and updates do not jitter.",
+        "section": "typography"
+      },
+      {
+        "name": "The Selection Ring Rule",
+        "body": "Hover and selection on cards and options are shown by switching the border to Action Blue plus a 1px inset ring of the same blue, never by a heavier shadow.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do keep Inter as the only family and use tabular numerals on every figure.",
+      "Do use Action Blue for every primary action and every selected state, and Brand Navy for identity and trust marks (wordmark, scores, anchor landmark).",
+      "Do build containers as white surfaces with a 1px hairline (border) on the page grey, at 8px for controls and 16px for cards.",
+      "Do show hover and selection with the blue border plus 1px inset ring.",
+      "Do keep transitions to 150 to 200ms colour, border and opacity changes (up to 280ms for the dialog, drawer and sliding thumbs), and honour reduced motion.",
+      "Do use full-round shapes for the search bar family (bar, segments, search button, chips, steppers, calendar marks) and 8px for rectangular controls.",
+      "Do draw map annotations (pins, chips, labels) in the system's own components over the recoloured basemap."
+    ],
+    "donts": [
+      "Don't introduce a second saturated action colour.",
+      "Don't use green except for free cancellation, met conditions and \"best\" marks.",
+      "Don't add a second typeface or a display face.",
+      "Don't lift resting cards with heavy shadows; Shadow 400 and above is for floating layers only."
+    ]
+  }
+}

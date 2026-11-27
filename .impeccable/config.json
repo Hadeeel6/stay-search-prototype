@@ -1,0 +1,32 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "overused-font",
+        "value": "inter",
+        "createdAt": "2026-11-27T04:17:55.967Z",
+        "reason": "Figma file is the visual authority: its text styles use only Inter, and the user asked to keep the Figma design system"
+      },
+      {
+        "rule": "side-tab",
+        "value": "*",
+        "files": [
+          "stay-search/styles.css"
+        ],
+        "createdAt": "2026-11-27T04:17:55.981Z",
+        "reason": "Figma frame 01g draws a 6px coloured strip across the top of each area card; user asked to reuse the Figma components"
+      },
+      {
+        "rule": "side-tab",
+        "value": "*",
+        "files": [
+          "stay-search/index.html"
+        ],
+        "createdAt": "2026-11-27T19:50:37.964Z",
+        "reason": "False positive: .seg::before is the 1px vertical divider between search-bar fields (Airbnb-style segmented bar), not an accent stripe on a box"
+      }
+    ]
+  }
+}
