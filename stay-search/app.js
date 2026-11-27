@@ -286,7 +286,10 @@ function renderBar() {
   const label = PRODUCTS.find(x => x[0] === p)[2];
   const bar = $('#sbar');
   bar.className = `sbar sbar-${p}` + (S.seg ? ' has-active' : '');
-  bar.innerHTML = segs.join('') + `<button class="sbar-go" type="submit" aria-label="Search ${esc(label)}">${ic('search', 'icon-18')}<span>Search</span></button>`;
+  const compact = $('#search-form').classList.contains('is-compact'), dirty = compact && isDirty();
+  bar.classList.toggle('is-dirty', dirty);
+  bar.innerHTML = segs.join('') + `<button class="sbar-go" type="submit" aria-label="${dirty ? 'Update results' : 'Search ' + esc(label)}">${ic(dirty ? 'arrow-right' : 'search', 'icon-18')}<span>${dirty ? 'Update' : 'Search'}</span></button>`
+    + (dirty ? '<button type="button" class="sbar-reset" data-act="draft-reset">Reset</button>' : '');
   $$('#products [data-product]').forEach(b => b.setAttribute('aria-selected', b.dataset.product === p));
   $$('.nav [data-product]').forEach(b => b.classList.toggle('is-current', b.dataset.product === p));
   const chip = (attr, v, on, t) => `<button type="button" class="chip" aria-pressed="${on}" data-${attr}="${v}">${t}</button>`;
@@ -347,22 +350,26 @@ function renderGuests(showErrors) {
     <div class="guest-foot"><button type="button" class="btn btn-primary btn-sm" data-act="guests-done">Done</button></div>`;
 }
 function renderHome() { renderBar(); }
-// Edit the trip without leaving results: the same search form moves into a panel under the trip bar.
-function openTripEdit() {
-  const view = $(`#v-${route.name}`), box = view && view.querySelector('.trip-edit');
-  if (!box) return;
-  S.product = 'stays';
-  box.appendChild($('#search-form')); box.hidden = false;
-  $$('[data-act="trip-edit"]').forEach(b => b.setAttribute('aria-expanded', 'true'));
-  renderBar();
-  openSeg('where');
-  const w = $('#where'); if (w) { w.focus({ preventScroll: true }); w.select(); }
+// On results, no-match and the full map the same search form docks, compact, into the trip bar.
+// Edits are a draft: nothing on the page changes until "Update" is pressed, and "Reset" restores the applied search.
+let applied = null;
+const snap = () => JSON.stringify({ where: S.where, start: +S.start, end: S.end ? +S.end : null, adults: S.adults, children: S.children, ages: S.ages, rooms: S.rooms, flex: S.flex });
+const isDirty = () => applied != null && snap() !== applied;
+function dockForm(n) {
+  const form = $('#search-form');
+  const slot = n === 'home' ? $('.hero-inner') : $(`#v-${n} .search-slot`);
+  if (slot && form.parentElement !== slot) slot.appendChild(form);
+  const compact = n !== 'home';
+  form.classList.toggle('is-compact', compact);
+  if (compact) { S.product = 'stays'; applied = snap(); }
+  $$('.tripbar').forEach(t => t.classList.remove('is-open'));
+  $$('[data-act="trip-toggle"]').forEach(b => b.setAttribute('aria-expanded', 'false'));
 }
-function closeTripEdit() {
-  const open = $$('.trip-edit').some(b => !b.hidden);
-  $$('.trip-edit').forEach(b => { b.hidden = true; });
-  $$('[data-act="trip-edit"]').forEach(b => b.setAttribute('aria-expanded', 'false'));
-  if (open || !$('.hero-inner #search-form')) $('.hero-inner').appendChild($('#search-form'));
+function resetDraft() {
+  if (!applied) return;
+  const a = JSON.parse(applied);
+  Object.assign(S, { where: a.where, start: new Date(a.start), end: a.end ? new Date(a.end) : null, adults: a.adults, children: a.children, ages: a.ages, rooms: a.rooms, flex: a.flex });
+  closePops(); renderBar();
 }
 function goTo(hash) { if (location.hash === hash) go(); else location.hash = hash; }
 function agesOk() { return S.ages.every(a => a !== ''); }
@@ -609,12 +616,13 @@ function go() {
   if (name === 'compare') { history.replaceState(null, '', '#results'); name = 'results'; after = openCompare; }
   const n = TITLES[name] ? name : 'home';
   const changed = n !== route.name || arg !== route.arg;
-  if (changed) closeTripEdit();
   route.name = n; route.arg = arg;
   $$('.view').forEach(v => v.classList.toggle('is-active', v.id === 'v-' + n));
   document.title = `${TITLES[n]} · Stay search prototype (usability study)`;
   closePops();
+  dockForm(n);
   if (n === 'home') renderHome();
+  else renderBar();
   if (n === 'results') {
     if (nights() > 30 && S.countOverride == null && !S.f.types.has('Apartment')) { location.replace('#nomatch'); return; }
     renderResults(); initMap('side');
@@ -674,8 +682,8 @@ document.addEventListener('click', e => {
     case 'cal-clear': S.end = null; S.calPhase = 'start'; S.seg = 'checkin'; renderCal(); renderBar(); break;
     case 'cal-done': openSeg('who'); break;
     case 'guests-done': if (agesOk()) { closePops(); $('.sbar-go').focus(); } else { renderGuests(true); $('#guests .is-error').focus(); } break;
-    case 'trip-edit': if ($$('.trip-edit').some(b => !b.hidden)) { closePops(); closeTripEdit(); } else openTripEdit(); break;
-    case 'trip-edit-close': closePops(); closeTripEdit(); { const p = $(`#v-${route.name} [data-act="trip-edit"]`); if (p) p.focus(); } break;
+    case 'trip-toggle': { const tb = t.closest('.tripbar'), open = !tb.classList.contains('is-open'); tb.classList.toggle('is-open', open); t.setAttribute('aria-expanded', open); if (!open) { closePops(); resetDraft(); } break; }
+    case 'draft-reset': resetDraft(); break;
     case 'quiz-open': e.preventDefault(); openQuiz(); break;
     case 'quiz-close': $('#quiz-dialog').close(); break;
     case 'quiz-back': S.qstep = Math.max(1, S.qstep - 1); renderQuiz(); $('#quiz-title').focus(); break;
@@ -735,7 +743,6 @@ document.addEventListener('keydown', e => {
     if (e.key === 'ArrowDown' || e.key === 'ArrowUp') { e.preventDefault(); sugIdx = (sugIdx + (e.key === 'ArrowDown' ? 1 : -1) + items.length) % items.length; renderSuggest(); }
     else if (e.key === 'Enter' && !$('#suggest').hidden) { e.preventDefault(); items[sugIdx] && items[sugIdx].click(); }
   }
-  if (e.key === 'Escape' && !S.seg && $$('.trip-edit').some(b => !b.hidden)) { closeTripEdit(); const p = $(`#v-${route.name} [data-act="trip-edit"]`); if (p) p.focus(); return; }
   if (e.key === 'Escape' && S.seg) { const seg = S.seg; closePops(); const b = $(`[data-seg="${seg}"]`); if (b) (b.querySelector('input') || b).focus(); }
 });
 document.addEventListener('mouseover', e => {
@@ -750,7 +757,7 @@ $('#search-form').addEventListener('submit', e => {
   if (!SUGGEST.some(s => s[1] === S.where)) S.where = 'Istanbul, Türkiye';
   S.countOverride = null; S.keepLong = false; S.fromQuiz = false;
   const here = route.name;
-  closePops(); closeTripEdit();
+  closePops();
   if (nights() > 30 && S.stayType !== 2) { goTo('#nomatch'); return; }
   if (S.stayType === 2 && nights() > 30) { S.f.types.add('Apartment'); S.countOverride = 63; }
   pendingUpdate = true;

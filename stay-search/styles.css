@@ -669,15 +669,6 @@ dialog::backdrop { background: rgba(11,42,91,.4); }
 /* Mid widths: a slightly narrower map keeps cards side by side */
 @media (max-width: 1360px) and (min-width: 1181px) { .results { grid-template-columns: 248px minmax(440px, 1fr) 320px; } }
 
-/* Trip editor on results, no-match and map: the home search form, moved under the trip bar */
-button.trip-pill { font: inherit; color: inherit; cursor: pointer; }
-.trip-pill[aria-expanded="true"] { border-color: var(--brand-500); background: var(--brand-50); }
-.trip-edit { position: relative; z-index: 15; background: var(--bg); padding: 0 max(var(--s-800), calc((100% - 1376px) / 2)) var(--s-400); animation: fade-in .18s ease-out; }
-.trip-edit .search-panel { margin: 0; padding: 0 56px 0 0; background: none; box-shadow: none; border-radius: 0; }
-.trip-edit .products { display: none; }
-.trip-edit .subopts { margin: 0 0 var(--s-300); }
-.trip-edit-x { position: absolute; top: 0; right: max(var(--s-800), calc((100% - 1376px) / 2)); }
-@media (max-width: 860px) { .trip-edit { padding: 0 var(--s-400) var(--s-400); } .trip-edit .search-panel { padding-right: 0; padding-top: 40px; } .trip-edit-x { right: var(--s-400); } }
 
 /* Square photos: sized to sit level with the card's text at each width */
 .card .photo { align-self: flex-start; width: 200px; height: auto; min-height: 0; aspect-ratio: 1 / 1; }
@@ -697,3 +688,43 @@ button.trip-pill { font: inherit; color: inherit; cursor: pointer; }
 }
 @container (min-width: 601px) { .card .price { width: 132px; } }
 @container (min-width: 501px) and (max-width: 600px) { .card .price { width: 116px; } }
+
+/* ===== Round 4 ===== */
+/* 1280-1439: give the list 644px so a full card fits beside a square photo */
+@media (max-width: 1439px) and (min-width: 1280px) { .results { grid-template-columns: 248px minmax(0, 1fr) 300px; padding-inline: var(--s-600); } }
+
+/* Docked search on results, no-match and full map: always visible, compact, edits as a draft */
+.tripbar { position: relative; z-index: 15; }
+.tripbar-lead { flex: 1; min-width: 0; }
+.search-slot { flex: 1; min-width: 0; max-width: 900px; }
+.search-panel.is-compact { margin: 0; padding: 0; background: none; box-shadow: none; border-radius: 0; color: var(--text); }
+.search-panel.is-compact .products, .search-panel.is-compact .subopts { display: none; }
+.search-panel.is-compact .sbar { min-height: 52px; box-shadow: none; }
+.search-panel.is-compact .seg { padding: 0 var(--s-400); }
+.search-panel.is-compact .seg-l { font-size: 12px; line-height: 14px; }
+.search-panel.is-compact .seg-v, .search-panel.is-compact .seg-in input { font-size: 14px; }
+.search-panel.is-compact .seg::before { top: 14px; bottom: 14px; }
+.search-panel.is-compact .sbar-go { height: 40px; min-width: 40px; margin: 0 6px 0 2px; padding: 0 12px; }
+.search-panel.is-compact .sbar-go span { max-width: 0; opacity: 0; }
+.search-panel.is-compact .sbar.has-active .sbar-go, .search-panel.is-compact .sbar.is-dirty .sbar-go, .search-panel.is-compact .sbar-go:hover { padding: 0 16px 0 12px; }
+.search-panel.is-compact .sbar.has-active .sbar-go span, .search-panel.is-compact .sbar.is-dirty .sbar-go span, .search-panel.is-compact .sbar-go:hover span { max-width: 80px; opacity: 1; }
+.sbar.is-dirty { border-color: var(--brand-500); box-shadow: 0 0 0 1px var(--brand-500); }
+.sbar-reset { flex: none; margin-right: var(--s-300); padding: 6px 4px; border: 0; background: none; color: var(--brand-700); font-size: 14px; text-decoration: underline; text-underline-offset: 3px; }
+.sbar-reset:hover { color: var(--brand-900); }
+.search-panel.is-compact .sbar-wrap .popover { top: calc(100% + 8px); }
+.tripbar .trip-pill { display: none; }
+#v-map .tripbar { padding-block: var(--s-300); }
+@media (max-width: 860px) {
+  .tripbar .trip-pill { display: inline-flex; }
+  .tripbar .search-slot { display: none; flex-basis: 100%; max-width: none; }
+  .tripbar.is-open .search-slot { display: block; }
+  .tripbar.is-open .trip-pill { border-color: var(--brand-500); background: var(--brand-50); }
+  .search-panel.is-compact .sbar { min-height: 0; }
+  .search-panel.is-compact .sbar-go span { max-width: 80px; opacity: 1; }
+}
+@media (max-width: 860px) {
+  .tripbar { flex-direction: column; align-items: stretch; }
+  .tripbar-lead { width: 100%; }
+  .tripbar .trip-pill, .tripbar .search-slot { width: 100%; }
+  .tripbar .basis { align-self: flex-start; }
+}
