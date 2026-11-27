@@ -9,7 +9,7 @@ A clickable prototype of a redesigned Agoda stay-search flow, built from the "Sc
 
 **Live prototype: https://hadeeel6.github.io/stay-search-prototype/**
 
-Use a desktop browser for the full layout. The page carries a "Usability study · not the real Agoda" label next to the logo. GitHub Pages serves it from the `gh-pages` branch, which holds a copy of the `stay-search` folder. To publish changes, push `main`, then update that branch:
+Use a desktop browser for the full layout. An info icon next to the logo explains that the page is a usability study prototype, not the Agoda website. GitHub Pages serves it from the `gh-pages` branch, which holds a copy of the `stay-search` folder. To publish changes, push `main`, then update that branch:
 
 ```bash
 git push origin `git subtree split --prefix stay-search main`:refs/heads/gh-pages --force
