@@ -636,6 +636,11 @@ dialog::backdrop { background: rgba(11,42,91,.4); }
   .basis small { display: none; }
 }
 
-/* Study label: tells anyone opening the shared link this is not the real site */
-.study-tag { display: inline-flex; align-items: center; padding: var(--s-100) var(--s-200); border-radius: var(--r-full); background: var(--warn-bg); color: var(--warn-text); font-size: 12px; font-weight: 600; line-height: 16px; white-space: nowrap; }
-@media (max-width: 860px) { .study-tag { font-size: 12px; padding: 2px var(--s-200); } .header-lead { gap: var(--s-200); } }
+/* Study note: an info tip beside the wordmark tells anyone opening the shared link this is not the real site */
+.study-info { position: relative; display: inline-grid; place-items: center; width: 28px; height: 28px; margin-left: calc(var(--s-400) * -1); border-radius: 50%; color: var(--text-2-strong); cursor: help; transition: background-color .15s, color .15s; }
+.study-info:hover, .study-info:focus-visible { background: var(--bg-2); color: var(--brand-700); }
+.study-tip { position: absolute; z-index: 60; top: calc(100% + 10px); left: -12px; width: 280px; padding: var(--s-300) var(--s-400); border-radius: var(--r-200); background: var(--brand-900); color: #fff; font-size: 14px; line-height: 1.4; box-shadow: var(--shadow-400); opacity: 0; visibility: hidden; transform: translateY(-4px); transition: opacity .15s, transform .15s var(--ease), visibility .15s; pointer-events: none; }
+.study-tip::before { content: ""; position: absolute; top: -5px; left: 21px; width: 10px; height: 10px; background: var(--brand-900); transform: rotate(45deg); }
+.study-tip b { display: block; font-weight: 600; margin-bottom: var(--s-100); }
+.study-info:hover .study-tip, .study-info:focus .study-tip { opacity: 1; visibility: visible; transform: none; }
+@media (max-width: 860px) { .study-info { margin-left: calc(var(--s-200) * -1); } .study-tip { width: min(280px, calc(100vw - 32px)); } }
