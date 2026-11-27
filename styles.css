@@ -644,3 +644,37 @@ dialog::backdrop { background: rgba(11,42,91,.4); }
 .study-tip b { display: block; font-weight: 600; margin-bottom: var(--s-100); }
 .study-info:hover .study-tip, .study-info:focus .study-tip { opacity: 1; visibility: visible; transform: none; }
 @media (max-width: 860px) { .study-info { margin-left: calc(var(--s-200) * -1); } .study-tip { width: min(280px, calc(100vw - 32px)); } }
+
+/* ===== Round 3: results fit any window width ===== */
+/* The list never shrinks below what a card needs, and cards adapt to the width the list really has. */
+.results { grid-template-columns: 284px minmax(440px, 1fr) minmax(340px, 400px); }
+.list { container-type: inline-size; }
+.card .photo { align-self: stretch; height: auto; min-height: 176px; }
+@media (max-width: 1360px) { .results { grid-template-columns: 248px minmax(440px, 1fr) minmax(320px, 360px); gap: var(--s-400); } }
+@media (max-width: 1180px) { .results { grid-template-columns: 248px minmax(0, 1fr); } }
+@media (max-width: 860px) { .results { grid-template-columns: 1fr; } }
+@container (max-width: 620px) {
+  .card { gap: var(--s-300); }
+  .card .photo { width: 168px; min-height: 160px; }
+  .card .price { width: 116px; }
+  .card .price strong { font-size: 24px; line-height: 30px; }
+}
+@container (max-width: 500px) {
+  .card { flex-direction: column; }
+  .card .photo { width: 100%; min-height: 0; height: 200px; }
+  .card .price { width: 100%; flex-direction: row; align-items: flex-end; text-align: left; }
+  .card .price-top { align-items: flex-start; }
+}
+
+/* Mid widths: a slightly narrower map keeps cards side by side */
+@media (max-width: 1360px) and (min-width: 1181px) { .results { grid-template-columns: 248px minmax(440px, 1fr) 320px; } }
+
+/* Trip editor on results, no-match and map: the home search form, moved under the trip bar */
+button.trip-pill { font: inherit; color: inherit; cursor: pointer; }
+.trip-pill[aria-expanded="true"] { border-color: var(--brand-500); background: var(--brand-50); }
+.trip-edit { position: relative; z-index: 15; background: var(--bg); padding: 0 max(var(--s-800), calc((100% - 1376px) / 2)) var(--s-400); animation: fade-in .18s ease-out; }
+.trip-edit .search-panel { margin: 0; padding: 0 56px 0 0; background: none; box-shadow: none; border-radius: 0; }
+.trip-edit .products { display: none; }
+.trip-edit .subopts { margin: 0 0 var(--s-300); }
+.trip-edit-x { position: absolute; top: 0; right: max(var(--s-800), calc((100% - 1376px) / 2)); }
+@media (max-width: 860px) { .trip-edit { padding: 0 var(--s-400) var(--s-400); } .trip-edit .search-panel { padding-right: 0; padding-top: 40px; } .trip-edit-x { right: var(--s-400); } }
