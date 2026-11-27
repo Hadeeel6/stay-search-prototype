@@ -593,7 +593,7 @@ function go() {
   const changed = n !== route.name || arg !== route.arg;
   route.name = n; route.arg = arg;
   $$('.view').forEach(v => v.classList.toggle('is-active', v.id === 'v-' + n));
-  document.title = `${TITLES[n]} · Stay search prototype`;
+  document.title = `${TITLES[n]} · Stay search prototype (usability study)`;
   closePops();
   if (n === 'home') renderHome();
   if (n === 'results') {
